@@ -1,0 +1,37 @@
+{
+    "id": "io.github.guilhermevinche.calculadora-imc-gtk4",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "45",
+    "sdk": "org.gnome.Sdk",
+    "command": "main.py",
+    "finish-args": [
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=ipc",
+        "--device=dri",
+        "--share=ipc"
+    ],
+    "metadata": {
+        "name": "calculadora-imc-gtk4",
+        "id": "io.github.guilhermevinche.calculadora-imc-gtk4",
+        "summary": "Calculadora IMC GTK4 para Flathub",
+        "description": "Calculadora IMC GTK4 para Flathub.",
+        "homepage": "https://github.com/guilhermevinche/calculadora-imc-gtk4"
+    },
+    "modules": [
+        {
+            "name": "calculadora-imc-gtk4",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 main.py /app/bin/main.py"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "main.py"
+                }
+            ]
+        }
+    ]
+}
